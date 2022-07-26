@@ -15,27 +15,42 @@
 html {
   font-size: 20px;
   width: 60%;
-  font-family: 'Wild Words','Fredoka One', cursive, 'sans-serif';
+  font-family: 'Wild Words', 'Fredoka One', cursive, 'sans-serif';
   /* setting the base font to 10px so that "em", "rem" and "vw" can be used accordingly.*/
   margin: 0 auto;
 }
 
-@font-face{
-  font-family: Wild Words;
-  src: url(https://www.dropbox.com/s/dsilcr8ei62iqsk/CC%20Wild%20Words%20Roman.ttf?raw=1)format('truetype');
-  /*setting the base font family to Wild Words to mimic the predominant font used in translated manga,webtoons, and mangas. This font does not work on any browser other than Safari at the moment */
+:root {
+  --border-color: #10444d;
+  --background-color: #021012;
+  --secondary-background: #06272c;
+  --font-color: #fff;
+  --link-color: #26d0e7;
+  --box-active-color: #0366d6;
 }
+
+/* box-shadow: 0 0 0 3px #0366d64d; */
+
+@font-face {
+  font-family: 'Wild Words';
+  src: url('/assets/Wild-words/cc_wild_words_roman-webfont.woff2') format('woff2'),
+    url('/assets/Wild-words/cc_wild_words_roman-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*setting the base font family to Wild Words to mimic the predominant font used in translated manga,webtoons, and mangas. This font does not work on any browser other than Safari at the moment */
 
 *,
 *::before,
 *::after {
-  box-sizing:content-box;
+  box-sizing: content-box;
 }
 
 body {
   font-weight: 400;
   line-height: 1.4;
-  color: white !important;
+  color: var(--font-color);
   height: 100%;
 }
 
@@ -49,46 +64,48 @@ body::before {
   height: 100%;
   width: 100%;
   z-index: -1;
-  background-image: linear-gradient(
-      180deg,
-      rgba(0,0,0, 0.6),
-      rgba(250, 128, 114, 0.0)   ),url("https://www.dropbox.com/s/k7lj2z72aowmfz2/massive%20anime%20wallpaper.png?raw=1");
+  background-image: linear-gradient(180deg,
+      rgb(2, 16, 18, 0.6),
+      rgba(6, 39, 44, 0.0)), url("/assets/anime-background.png");
   background-size: cover;
   background-repeat: no repeat;
 }
 
 form {
-    justify-content: center;
+  justify-content: center;
 }
 
 div #background-opacity {
-    background-color:rgba(0,0,0, 0.65);
+  background-color: rgb(2, 16, 18, 0.95);
+  border-style: solid;
+  border-color: var(--border-color);
+  border-radius: 5px;
   width: fit-content;
   height: auto;
-  position:relative;
+  position: relative;
 }
 
 div #answer-section {
   position: relative;
-  font-family: 'Nixie One';
+  font-family: 'Wild Words', 'Nixie One';
   margin-top: 0;
   text-align: left;
-  color: #FFFFFF;
+  color: var(--font-color);
   width: fit-content;
 }
 
-select, input {
-    max-width: 70% !important;
+select,
+input {
+  max-width: 70%;
 }
 
 #survey-form {
-    max-width:70%;
+  max-width: 70%;
 }
 
 p {
   position: relative;
   font-size: 1.3rem;
-  text-shadow: 1px 1px #000000;
 }
 
 h1 {
@@ -100,26 +117,28 @@ h1 {
   font-family: 'Press Start 2P', cursive;
 }
 
+/* Demographics */
 legend {
   font-size: 1.3rem;
-  text-shadow: 1px 1px #000000;
 }
 
+
 div .mb-3 .border {
-  border-radius: 1rem;
-  border-color: #cf0606 !important;
-  border-style: solid !important;
+  border-radius: 5px;
+  border-color: var(--border-color);
+  border-style: solid;
+  border: 1px solid var(--border-color) !important;
 }
 
 hr {
-    border-style: solid;
-    color: #cf0606 !important;
-    opacity: 0.7 !important;
+  border-style: solid;
+  color: var(--border-color);
+  opacity: 0.7 !important;
 }
 
 #description {
   text-align: center;
-  font-family: 'Fredoka One', cursive, 'sans-serif';
+  font-family: 'Wild Words', 'Fredoka One', cursive, 'sans-serif';
 }
 
 label {
@@ -131,45 +150,60 @@ label {
 
 
 .container {
-  width:fit-content;
+  width: fit-content;
   height: auto;
   user-select: none;
 }
 
 .containter #page {
-    justify-content: center;
-    text-align: center;
-    
+  justify-content: center;
+  text-align: center;
+
 }
 
 #enter-anime {
   font-size: .8rem;
 }
+
+/* form styles */
+
 form {
   background: "";
-  padding:1rem 1rem;
+  padding: 1rem 1rem;
   position: relative;
   display: block;
 }
 
 input,
-button
-select,
-textarea {
+button select,
+textarea,
+select {
   margin: 0;
-  border-radius: 1rem;
-  border-color: transparent;
-  font-family: Wild Words, 'Fredoka One', cursive, 'sans-serif';
+  border-radius: 6px;
+  border-style: solid;
+  border-color: var(--border-color);
+  border-width: 1px;
+  font-family: 'Wild Words', 'Fredoka One', cursive, 'sans-serif';
   font-size: 1rem;
   line-height: inherit;
+  background: none;
+  color: var(--border-color);
+}
+
+form:focus,
+form:focus-,
+.survey-section:focus,
+.survey-section:focus-visible {
+  border-color: var(--box-active-color);
+  box-shadow: 0 0 0 3px #0366d64d;
+  outline: none;
 }
 
 ::placeholder {
-  color: #FFCAC7;
   text-align: left;
   font-size: 0.7rem;
   padding-left: 0.3rem;
-  font-family: 'Fredoka One', cursive, 'sans-serif';
+  font-family: 'Wild Words', 'Fredoka One', cursive, 'sans-serif';
 }
 
 .input-radio,
@@ -179,22 +213,20 @@ textarea {
   min-height: 1.25rem;
   min-width: 1.25rem;
 }
+
 /* looking for a way to make all checkboxes stay the same size in google chrome. I tried to make each option one line to avoid the shrinking of the boxes but I did not want to alter my original plans too much! If anyone knows please email me and I will make the proper adjustments.*/
 
-.checkbox-one
-{
+.checkbox-one {
   margin-right: 0.5rem;
   cursor: pointer;
 }
 
-.checkbox-two
-{
+.checkbox-two {
   margin-right: 0.5rem;
   cursor: pointer;
 }
 
-.checkbox-three
-{
+.checkbox-three {
   margin-right: 0.5rem;
   cursor: pointer;
 }
@@ -202,15 +234,15 @@ textarea {
 .input-textarea {
   min-height: 120px;
   width: 100%;
-  resize:vertical;
+  resize: vertical;
 }
 
 .submit-button {
   display: inline-block;
-  border-radius: 1rem;
-  background-color: #cf0606;
+  border-radius: 5px;
+  background-color: var(--link-color);
   border: none;
-  color: #FFFFFF;
+  color: var(--font-color);
   text-align: center;
   font-family: 'Press Start 2P';
   font-size: 28px;
@@ -248,17 +280,18 @@ textarea {
 textarea {
   width: 100%;
   padding: 0.5rem 1rem;
-  border-style: hidden;
+  border-style: solid;
+  border-color: var(--border-color);
 }
 
 input [class=checkbox-three] {
   transform: scale(20%);
-  min-width:20%!important;
-  max-width: 20%!important;
+  min-width: 20%;
+  max-width: 20%;
   height: auto;
 }
 
 footer {
-    height: 10px !important;
-    width: 100% !important;
+  height: 10px;
+  width: 100%;
 }
