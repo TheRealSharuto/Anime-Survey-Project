@@ -1,24 +1,50 @@
+/* Wild Words Font */
+@font-face {
+  font-family: 'Wild Words';
+  src: url('/assets/Wild-words/cc_wild_words_roman-webfont.woff2') format('woff2'),
+    url('/assets/Wild-words/cc_wild_words_roman-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*setting the base font family to Wild Words to mimic the predominant font used in translated manga,webtoons, and mangas. This font does not work on any browser other than Safari at the moment */
+
+/* Open Sans */
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/assets/Open-sans/opensans-variablefont_wdthwght-webfont.woff2') format('woff2'),
+    url('/assets/Open-sans/opensans-variablefont_wdthwght-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
 /* Fredoka Font */
 
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 /* Press Start 2P Font*/
 
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Press+Start+2P&display=swap');
+@font-face {
+  font-family: 'Press Start 2P';
+  src: url('/assets/Press-start-2p/pressstart2p-vav7-webfont.woff2') format('woff2'),
+    url('/assets/Press-start-2p/pressstart2p-vav7-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 
-/* Nixie One */
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nixie+One&family=Press+Start+2P&display=swap');
-
-/* StickNoBills Font*/
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nixie+One&family=Press+Start+2P&family=Stick+No+Bills:wght@300&display=swap');
+}
 
 html {
-  font-size: 20px;
-  width: 60%;
+  font-size: 16px;
+  width: 100%;
   font-family: 'Wild Words', 'Fredoka One', cursive, 'sans-serif';
   /* setting the base font to 10px so that "em", "rem" and "vw" can be used accordingly.*/
   margin: 0 auto;
+  justify-items: center;
 }
+
 
 :root {
   --border-color: #10444d;
@@ -31,15 +57,9 @@ html {
 
 /* box-shadow: 0 0 0 3px #0366d64d; */
 
-@font-face {
-  font-family: 'Wild Words';
-  src: url('/assets/Wild-words/cc_wild_words_roman-webfont.woff2') format('woff2'),
-    url('/assets/Wild-words/cc_wild_words_roman-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+.container {
+  height: 50px;
 }
-
-/*setting the base font family to Wild Words to mimic the predominant font used in translated manga,webtoons, and mangas. This font does not work on any browser other than Safari at the moment */
 
 *,
 *::before,
@@ -94,18 +114,20 @@ div #answer-section {
   width: fit-content;
 }
 
+
+
 select,
 input {
   max-width: 70%;
 }
 
 #survey-form {
-  max-width: 70%;
+  max-width: 75%;
 }
 
 p {
   position: relative;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 h1 {
@@ -114,7 +136,7 @@ h1 {
   padding: 5;
   text-align: center;
   position: relative;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P', 'Wild Words';
 }
 
 /* Demographics */
@@ -136,6 +158,7 @@ hr {
   opacity: 0.7 !important;
 }
 
+/* Word Styling */
 #description {
   text-align: center;
   font-family: 'Wild Words', 'Fredoka One', cursive, 'sans-serif';
@@ -144,15 +167,22 @@ hr {
 label {
   display: flex;
   align-items: center;
-  font-size: 1.125rem;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 
+.small {
+  font-size: 13px;
+}
 
-.container {
+.container-sm {
   width: fit-content;
   height: auto;
   user-select: none;
+}
+
+.row {
+  margin: auto;
 }
 
 .containter #page {
@@ -174,10 +204,7 @@ form {
   display: block;
 }
 
-input,
-button select,
-textarea,
-select {
+button select {
   margin: 0;
   border-radius: 6px;
   border-style: solid;
@@ -190,10 +217,31 @@ select {
   color: var(--border-color);
 }
 
-form:focus,
-form:focus-,
-.survey-section:focus,
-.survey-section:focus-visible {
+input,
+select,
+textarea {
+  margin: 0;
+  border-radius: 6px;
+  border-style: solid;
+  border-color: var(--border-color);
+  border-width: 1px;
+  font-family: 'Open Sans';
+  font-size: 1rem;
+  line-height: inherit;
+  background: none;
+  color: var(--font-color)
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  border: 1px var(--link-color) solid;
+  transition: all 0.5s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
   border-color: var(--box-active-color);
   box-shadow: 0 0 0 3px #0366d64d;
   outline: none;
@@ -203,7 +251,7 @@ form:focus-,
   text-align: left;
   font-size: 0.7rem;
   padding-left: 0.3rem;
-  font-family: 'Wild Words', 'Fredoka One', cursive, 'sans-serif';
+  font-family: 'Open Sans', 'Wild Words', 'Fredoka One', cursive, 'sans-serif';
 }
 
 .input-radio,
@@ -237,21 +285,27 @@ form:focus-,
   resize: vertical;
 }
 
+/* Submit button */
+
 .submit-button {
   display: inline-block;
   border-radius: 5px;
-  background-color: var(--link-color);
-  border: none;
+  background-color: var(--secondary-background);
+  border: var(--border-color) 1px solid;
   color: var(--font-color);
   text-align: center;
   font-family: 'Press Start 2P';
-  font-size: 28px;
+  font-size: 20px;
   padding: 20px;
   width: 200px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+  justify-content: center !important;
+
 }
+
+/* submit button animation */
 
 .submit-button span {
   cursor: pointer;
@@ -268,15 +322,12 @@ form:focus-,
   transition: 0.5s;
 }
 
-.submit-button:hover span {
-  padding-right: 25px;
-}
-
 .submit-button:hover span:after {
   opacity: 1;
-  right: 0;
+  right: -30;
 }
 
+/* Textbox */
 textarea {
   width: 100%;
   padding: 0.5rem 1rem;
@@ -284,6 +335,7 @@ textarea {
   border-color: var(--border-color);
 }
 
+/* for jQuery */
 input [class=checkbox-three] {
   transform: scale(20%);
   min-width: 20%;
@@ -291,7 +343,142 @@ input [class=checkbox-three] {
   height: auto;
 }
 
+
+
+/* Bottom */
+
 footer {
   height: 10px;
   width: 100%;
+}
+
+/* Checkmarks */
+
+/* Customize the label (the container) */
+.container-check {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container-check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: var(--link-color);
+}
+
+/* On mouse-over, add a grey background color */
+.container-check:hover input~.checkmark {
+  background-color: var(--secondary-background);
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-check input:checked~.checkmark {
+  background-color: var(--box-active-color);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container-check input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-check .checkmark:after {
+  left: 6px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--font-color);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Media Query */
+
+@media only screen and (max-width: 768px) {
+  html {
+    width: fit-content;
+  }
+
+  /* Style the checkmark/indicator */
+  .container-check .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--font-color);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  div #answer-section {
+    width: 400px;
+  }
+
+  .submit-button {
+    display: inline-block;
+    border-radius: 5px;
+    background-color: var(--secondary-background);
+    border: var(--border-color) 1px solid;
+    color: var(--font-color);
+    text-align: center;
+    font-family: 'Press Start 2P';
+    font-size: 20px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+  div .button-center {
+    padding-left: 25px !important;
+  }
+
+  textarea {
+    width: 200px;
+  }
+
+}
+
+#container-foot {
+  text-align: center;
+}
+
+div .button-center {
+  padding-left: 100px;
+}
+
+textarea {
+  width: 300px;
 }

@@ -11,6 +11,10 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/55613112e1.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+                rel="stylesheet">
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.6.0.js"
                 integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
@@ -20,380 +24,624 @@
 </head>
 
 <body>
-        <div class="container" id="page">
-                <div class="d-flex row align-items-center align-self-center justify-content-center no-wrap p-2">
-                        <header class="header">
-                                <h1 id="title">The Anime Survey</h1>
-                                <p id="description" class="sub-text">
-                                        A survey for the anime fans who want their voices to be heard!</p>
-                        </header>
-                        <div class="d-flex justify-content-center p-2" id="background-opacity">
-                                <div class="d-flex justify-content-center" id="answer-section">
-                                        <form id="survey-form">
-                                                <div class="mb-3 survey-section">
-                                                        <label id="enter-name" for="name">Name</label>
-                                                        <input type="text" name="name" id="name" class="surveyformat"
-                                                                placeholder="Naruto Uzumaki" required />
-                                                </div>
-                                                <br>
-                                                <div class="survey-section">
-                                                        <label id="email-label" for="email">Email</label>
-                                                        <input type="email" name="email" id="email" class="surveyformat"
-                                                                placeholder="AnimeLover@otaku.net" />
-                                                </div>
-                                                <br>
-                                                <div class="survey-section">
-                                                        <div class="mb-3">
-                                                                <fieldset class="border p-2">
-                                                                        <legend><b>Demographics</b></legend><br>
-                                                                        <br>
-                                                                        <label id="number-label"
-                                                                                for="number">Age</label>
-                                                                        <input type="number" name="age" id="number"
-                                                                                min="0" max="130" class="surveyformat"
-                                                                                placeholder="Year" required />
-                                                                        <br>
-                                                                        <br>
-                                                                        <label>Gender</label>
-                                                                        <br>
-                                                                        <select id="dropdown" name="gender"
-                                                                                class="survey-section" required>
-                                                                                <option disabled selected value> Select
-                                                                                </option>
-                                                                                <option value="female"> Female</option>
-                                                                                <option value="male"> Male</option>
-                                                                                <option value="other">Other</option>
-                                                                        </select>
-                                                                        <br>
-                                                                        <br>
-                                                                        <label> Country </label>
-                                                                        <br>
-                                                                        <input list="country-list" type="text">
-                                                                        <datalist id="country-list">
-                                                                                <option value="AF">Afghanistan</option>
-                                                                                <option value="AX">Åland Islands
-                                                                                </option>
-                                                                                <option value="AL">Albania</option>
-                                                                                <option value="DZ">Algeria</option>
-                                                                                <option value="AS">American Samoa
-                                                                                </option>
-                                                                                <option value="AD">Andorra</option>
-                                                                                <option value="AO">Angola</option>
-                                                                                <option value="AI">Anguilla</option>
-                                                                                <option value="AQ">Antarctica</option>
-                                                                                <option value="AG">Antigua and Barbuda
-                                                                                </option>
-                                                                                <option value="AR">Argentina</option>
-                                                                                <option value="AM">Armenia</option>
-                                                                                <option value="AW">Aruba</option>
-                                                                                <option value="AU">Australia</option>
-                                                                                <option value="AT">Austria</option>
-                                                                                <option value="AZ">Azerbaijan</option>
-                                                                                <option value="BS">Bahamas</option>
-                                                                                <option value="BH">Bahrain</option>
-                                                                                <option value="BD">Bangladesh</option>
-                                                                                <option value="BB">Barbados</option>
-                                                                                <option value="BY">Belarus</option>
-                                                                                <option value="BE">Belgium</option>
-                                                                                <option value="BZ">Belize</option>
-                                                                                <option value="BJ">Benin</option>
-                                                                                <option value="BM">Bermuda</option>
-                                                                                <option value="BT">Bhutan</option>
-                                                                                <option value="BO">Bolivia,
-                                                                                        Plurinational State of</option>
-                                                                                <option value="BQ">Bonaire, Sint
-                                                                                        Eustatius and Saba</option>
-                                                                                <option value="BA">Bosnia and
-                                                                                        Herzegovina</option>
-                                                                                <option value="BW">Botswana</option>
-                                                                                <option value="BV">Bouvet Island
-                                                                                </option>
-                                                                                <option value="BR">Brazil</option>
-                                                                                <option value="IO">British Indian Ocean
-                                                                                        Territory</option>
-                                                                                <option value="BN">Brunei Darussalam
-                                                                                </option>
-                                                                                <option value="BG">Bulgaria</option>
-                                                                                <option value="BF">Burkina Faso</option>
-                                                                                <option value="BI">Burundi</option>
-                                                                                <option value="KH">Cambodia</option>
-                                                                                <option value="CM">Cameroon</option>
-                                                                                <option value="CA">Canada</option>
-                                                                                <option value="CV">Cape Verde</option>
-                                                                                <option value="KY">Cayman Islands
-                                                                                </option>
-                                                                                <option value="CF">Central African
-                                                                                        Republic</option>
-                                                                                <option value="TD">Chad</option>
-                                                                                <option value="CL">Chile</option>
-                                                                                <option value="CN">China</option>
-                                                                                <option value="CX">Christmas Island
-                                                                                </option>
-                                                                                <option value="CC">Cocos (Keeling)
-                                                                                        Islands</option>
-                                                                                <option value="CO">Colombia</option>
-                                                                                <option value="KM">Comoros</option>
-                                                                                <option value="CG">Congo</option>
-                                                                                <option value="CD">Congo, the Democratic
-                                                                                        Republic of the</option>
-                                                                                <option value="CK">Cook Islands</option>
-                                                                                <option value="CR">Costa Rica</option>
-                                                                                <option value="CI">Côte d'Ivoire
-                                                                                </option>
-                                                                                <option value="HR">Croatia</option>
-                                                                                <option value="CU">Cuba</option>
-                                                                                <option value="CW">Curaçao</option>
-                                                                                <option value="CY">Cyprus</option>
-                                                                                <option value="CZ">Czech Republic
-                                                                                </option>
-                                                                                <option value="DK">Denmark</option>
-                                                                                <option value="DJ">Djibouti</option>
-                                                                                <option value="DM">Dominica</option>
-                                                                                <option value="DO">Dominican Republic
-                                                                                </option>
-                                                                                <option value="EC">Ecuador</option>
-                                                                                <option value="EG">Egypt</option>
-                                                                                <option value="SV">El Salvador</option>
-                                                                                <option value="GQ">Equatorial Guinea
-                                                                                </option>
-                                                                                <option value="ER">Eritrea</option>
-                                                                                <option value="EE">Estonia</option>
-                                                                                <option value="ET">Ethiopia</option>
-                                                                                <option value="FK">Falkland Islands
-                                                                                        (Malvinas)</option>
-                                                                                <option value="FO">Faroe Islands
-                                                                                </option>
-                                                                                <option value="FJ">Fiji</option>
-                                                                                <option value="FI">Finland</option>
-                                                                                <option value="FR">France</option>
-                                                                                <option value="GF">French Guiana
-                                                                                </option>
-                                                                                <option value="PF">French Polynesia
-                                                                                </option>
-                                                                                <option value="TF">French Southern
-                                                                                        Territories</option>
-                                                                                <option value="GA">Gabon</option>
-                                                                                <option value="GM">Gambia</option>
-                                                                                <option value="GE">Georgia</option>
-                                                                                <option value="DE">Germany</option>
-                                                                                <option value="GH">Ghana</option>
-                                                                                <option value="GI">Gibraltar</option>
-                                                                                <option value="GR">Greece</option>
-                                                                                <option value="GL">Greenland</option>
-                                                                                <option value="GD">Grenada</option>
-                                                                                <option value="GP">Guadeloupe</option>
-                                                                                <option value="GU">Guam</option>
-                                                                                <option value="GT">Guatemala</option>
-                                                                                <option value="GG">Guernsey</option>
-                                                                                <option value="GN">Guinea</option>
-                                                                                <option value="GW">Guinea-Bissau
-                                                                                </option>
-                                                                                <option value="GY">Guyana</option>
-                                                                                <option value="HT">Haiti</option>
-                                                                                <option value="HM">Heard Island and
-                                                                                        McDonald Islands</option>
-                                                                                <option value="VA">Holy See (Vatican
-                                                                                        City State)</option>
-                                                                                <option value="HN">Honduras</option>
-                                                                                <option value="HK">Hong Kong</option>
-                                                                                <option value="HU">Hungary</option>
-                                                                                <option value="IS">Iceland</option>
-                                                                                <option value="IN">India</option>
-                                                                                <option value="ID">Indonesia</option>
-                                                                                <option value="IR">Iran, Islamic
-                                                                                        Republic of</option>
-                                                                                <option value="IQ">Iraq</option>
-                                                                                <option value="IE">Ireland</option>
-                                                                                <option value="IM">Isle of Man</option>
-                                                                                <option value="IL">Israel</option>
-                                                                                <option value="IT">Italy</option>
-                                                                                <option value="JM">Jamaica</option>
-                                                                                <option value="JP">Japan</option>
-                                                                                <option value="JE">Jersey</option>
-                                                                                <option value="JO">Jordan</option>
-                                                                                <option value="KZ">Kazakhstan</option>
-                                                                                <option value="KE">Kenya</option>
-                                                                                <option value="KI">Kiribati</option>
-                                                                                <option value="KP">Korea, Democratic
-                                                                                        People's Republic of</option>
-                                                                                <option value="KR">Korea, Republic of
-                                                                                </option>
-                                                                                <option value="KW">Kuwait</option>
-                                                                                <option value="KG">Kyrgyzstan</option>
-                                                                                <option value="LA">Lao People's
-                                                                                        Democratic Republic</option>
-                                                                                <option value="LV">Latvia</option>
-                                                                                <option value="LB">Lebanon</option>
-                                                                                <option value="LS">Lesotho</option>
-                                                                                <option value="LR">Liberia</option>
-                                                                                <option value="LY">Libya</option>
-                                                                                <option value="LI">Liechtenstein
-                                                                                </option>
-                                                                                <option value="LT">Lithuania</option>
-                                                                                <option value="LU">Luxembourg</option>
-                                                                                <option value="MO">Macao</option>
-                                                                                <option value="MK">Macedonia, the former
-                                                                                        Yugoslav Republic of</option>
-                                                                                <option value="MG">Madagascar</option>
-                                                                                <option value="MW">Malawi</option>
-                                                                                <option value="MY">Malaysia</option>
-                                                                                <option value="MV">Maldives</option>
-                                                                                <option value="ML">Mali</option>
-                                                                                <option value="MT">Malta</option>
-                                                                                <option value="MH">Marshall Islands
-                                                                                </option>
-                                                                                <option value="MQ">Martinique</option>
-                                                                                <option value="MR">Mauritania</option>
-                                                                                <option value="MU">Mauritius</option>
-                                                                                <option value="YT">Mayotte</option>
-                                                                                <option value="MX">Mexico</option>
-                                                                                <option value="FM">Micronesia, Federated
-                                                                                        States of</option>
-                                                                                <option value="MD">Moldova, Republic of
-                                                                                </option>
-                                                                                <option value="MC">Monaco</option>
-                                                                                <option value="MN">Mongolia</option>
-                                                                                <option value="ME">Montenegro</option>
-                                                                                <option value="MS">Montserrat</option>
-                                                                                <option value="MA">Morocco</option>
-                                                                                <option value="MZ">Mozambique</option>
-                                                                                <option value="MM">Myanmar</option>
-                                                                                <option value="NA">Namibia</option>
-                                                                                <option value="NR">Nauru</option>
-                                                                                <option value="NP">Nepal</option>
-                                                                                <option value="NL">Netherlands</option>
-                                                                                <option value="NC">New Caledonia
-                                                                                </option>
-                                                                                <option value="NZ">New Zealand</option>
-                                                                                <option value="NI">Nicaragua</option>
-                                                                                <option value="NE">Niger</option>
-                                                                                <option value="NG">Nigeria</option>
-                                                                                <option value="NU">Niue</option>
-                                                                                <option value="NF">Norfolk Island
-                                                                                </option>
-                                                                                <option value="MP">Northern Mariana
-                                                                                        Islands</option>
-                                                                                <option value="NO">Norway</option>
-                                                                                <option value="OM">Oman</option>
-                                                                                <option value="PK">Pakistan</option>
-                                                                                <option value="PW">Palau</option>
-                                                                                <option value="PS">Palestinian
-                                                                                        Territory, Occupied</option>
-                                                                                <option value="PA">Panama</option>
-                                                                                <option value="PG">Papua New Guinea
-                                                                                </option>
-                                                                                <option value="PY">Paraguay</option>
-                                                                                <option value="PE">Peru</option>
-                                                                                <option value="PH">Philippines</option>
-                                                                                <option value="PN">Pitcairn</option>
-                                                                                <option value="PL">Poland</option>
-                                                                                <option value="PT">Portugal</option>
-                                                                                <option value="PR">Puerto Rico</option>
-                                                                                <option value="QA">Qatar</option>
-                                                                                <option value="RE">Réunion</option>
-                                                                                <option value="RO">Romania</option>
-                                                                                <option value="RU">Russian Federation
-                                                                                </option>
-                                                                                <option value="RW">Rwanda</option>
-                                                                                <option value="BL">Saint Barthélemy
-                                                                                </option>
-                                                                                <option value="SH">Saint Helena,
-                                                                                        Ascension and Tristan da Cunha
-                                                                                </option>
-                                                                                <option value="KN">Saint Kitts and Nevis
-                                                                                </option>
-                                                                                <option value="LC">Saint Lucia</option>
-                                                                                <option value="MF">Saint Martin (French
-                                                                                        part)</option>
-                                                                                <option value="PM">Saint Pierre and
-                                                                                        Miquelon</option>
-                                                                                <option value="VC">Saint Vincent and the
-                                                                                        Grenadines</option>
-                                                                                <option value="WS">Samoa</option>
-                                                                                <option value="SM">San Marino</option>
-                                                                                <option value="ST">Sao Tome and Principe
-                                                                                </option>
-                                                                                <option value="SA">Saudi Arabia</option>
-                                                                                <option value="SN">Senegal</option>
-                                                                                <option value="RS">Serbia</option>
-                                                                                <option value="SC">Seychelles</option>
-                                                                                <option value="SL">Sierra Leone</option>
-                                                                                <option value="SG">Singapore</option>
-                                                                                <option value="SX">Sint Maarten (Dutch
-                                                                                        part)</option>
-                                                                                <option value="SK">Slovakia</option>
-                                                                                <option value="SI">Slovenia</option>
-                                                                                <option value="SB">Solomon Islands
-                                                                                </option>
-                                                                                <option value="SO">Somalia</option>
-                                                                                <option value="ZA">South Africa</option>
-                                                                                <option value="GS">South Georgia and the
-                                                                                        South Sandwich Islands</option>
-                                                                                <option value="SS">South Sudan</option>
-                                                                                <option value="ES">Spain</option>
-                                                                                <option value="LK">Sri Lanka</option>
-                                                                                <option value="SD">Sudan</option>
-                                                                                <option value="SR">Suriname</option>
-                                                                                <option value="SJ">Svalbard and Jan
-                                                                                        Mayen</option>
-                                                                                <option value="SZ">Swaziland</option>
-                                                                                <option value="SE">Sweden</option>
-                                                                                <option value="CH">Switzerland</option>
-                                                                                <option value="SY">Syrian Arab Republic
-                                                                                </option>
-                                                                                <option value="TW">Taiwan, Province of
-                                                                                        China</option>
-                                                                                <option value="TJ">Tajikistan</option>
-                                                                                <option value="TZ">Tanzania, United
-                                                                                        Republic of</option>
-                                                                                <option value="TH">Thailand</option>
-                                                                                <option value="TL">Timor-Leste</option>
-                                                                                <option value="TG">Togo</option>
-                                                                                <option value="TK">Tokelau</option>
-                                                                                <option value="TO">Tonga</option>
-                                                                                <option value="TT">Trinidad and Tobago
-                                                                                </option>
-                                                                                <option value="TN">Tunisia</option>
-                                                                                <option value="TR">Turkey</option>
-                                                                                <option value="TM">Turkmenistan</option>
-                                                                                <option value="TC">Turks and Caicos
-                                                                                        Islands</option>
-                                                                                <option value="TV">Tuvalu</option>
-                                                                                <option value="UG">Uganda</option>
-                                                                                <option value="UA">Ukraine</option>
-                                                                                <option value="AE">United Arab Emirates
-                                                                                </option>
-                                                                                <option value="GB">United Kingdom
-                                                                                </option>
-                                                                                <option value="US">United States
-                                                                                </option>
-                                                                                <option value="UM">United States Minor
-                                                                                        Outlying Islands</option>
-                                                                                <option value="UY">Uruguay</option>
-                                                                                <option value="UZ">Uzbekistan</option>
-                                                                                <option value="VU">Vanuatu</option>
-                                                                                <option value="VE">Venezuela, Bolivarian
-                                                                                        Republic of</option>
-                                                                                <option value="VN">Viet Nam</option>
-                                                                                <option value="VG">Virgin Islands,
-                                                                                        British</option>
-                                                                                <option value="VI">Virgin Islands, U.S.
-                                                                                </option>
-                                                                                <option value="WF">Wallis and Futuna
-                                                                                </option>
-                                                                                <option value="EH">Western Sahara
-                                                                                </option>
-                                                                                <option value="YE">Yemen</option>
-                                                                                <option value="ZM">Zambia</option>
-                                                                                <option value="ZW">Zimbabwe</option>
-                                                                        </datalist>
-                                                                        </input>
-                                                                </fieldset>
+        <div class="container"></div>
+        <div class="container-sm" id="page">
+                <div class="d-flex row align-items-center align-self-center justify-content-center no-wrap mx-auto">
+                        <div class="col-10 justify-content-center">
+                                <header class="header">
+                                        <h1 id="title">The Anime Survey</h1>
+                                        <p id="description" class="sub-text">
+                                                A survey for the anime fans who want their voices to be heard!</p>
+                                </header>
+                                <div class="d-flex justify-content-center p-2" id="background-opacity">
+                                        <div class="d-flex justify-content-center" id="answer-section">
+                                                <form id="survey-form">
+                                                        <div class="mb-3 survey-section">
+                                                                <label id="enter-name" for="name">Name</label>
+                                                                <input type="text" name="name" id="name"
+                                                                        class="surveyformat"
+                                                                        placeholder="Naruto Uzumaki" required />
+                                                        </div>
+                                                        <br>
+                                                        <div class="survey-section">
+                                                                <label id="email-label" for="email">Email</label>
+                                                                <input type="email" name="email" id="email"
+                                                                        class="surveyformat"
+                                                                        placeholder="AnimeLover@otaku.net" />
+                                                        </div>
+                                                        <br>
+                                                        <div class="survey-section">
+                                                                <div class="mb-3">
+                                                                        <fieldset class="border p-2">
+                                                                                <legend><b>Demographics</b></legend><br>
+                                                                                <br>
+                                                                                <label id="number-label"
+                                                                                        for="number">Age</label>
+                                                                                <input type="number" name="age"
+                                                                                        id="number" min="0" max="130"
+                                                                                        class="surveyformat"
+                                                                                        placeholder="Year" required />
+                                                                                <br>
+                                                                                <br>
+                                                                                <label>Gender</label>
+                                                                                <br>
+                                                                                <select id="dropdown" name="gender"
+                                                                                        class="survey-section" required>
+                                                                                        <option disabled selected value>
+                                                                                                Select
+                                                                                        </option>
+                                                                                        <option value="female"> Female
+                                                                                        </option>
+                                                                                        <option value="male"> Male
+                                                                                        </option>
+                                                                                        <option value="other">Other
+                                                                                        </option>
+                                                                                </select>
+                                                                                <br>
+                                                                                <br>
+                                                                                <label> Country </label>
+                                                                                <br>
+                                                                                <input list="country-list" type="text">
+                                                                                <datalist id="country-list">
+                                                                                        <option value="AF">Afghanistan
+                                                                                        </option>
+                                                                                        <option value="AX">Åland Islands
+                                                                                        </option>
+                                                                                        <option value="AL">Albania
+                                                                                        </option>
+                                                                                        <option value="DZ">Algeria
+                                                                                        </option>
+                                                                                        <option value="AS">American
+                                                                                                Samoa
+                                                                                        </option>
+                                                                                        <option value="AD">Andorra
+                                                                                        </option>
+                                                                                        <option value="AO">Angola
+                                                                                        </option>
+                                                                                        <option value="AI">Anguilla
+                                                                                        </option>
+                                                                                        <option value="AQ">Antarctica
+                                                                                        </option>
+                                                                                        <option value="AG">Antigua and
+                                                                                                Barbuda
+                                                                                        </option>
+                                                                                        <option value="AR">Argentina
+                                                                                        </option>
+                                                                                        <option value="AM">Armenia
+                                                                                        </option>
+                                                                                        <option value="AW">Aruba
+                                                                                        </option>
+                                                                                        <option value="AU">Australia
+                                                                                        </option>
+                                                                                        <option value="AT">Austria
+                                                                                        </option>
+                                                                                        <option value="AZ">Azerbaijan
+                                                                                        </option>
+                                                                                        <option value="BS">Bahamas
+                                                                                        </option>
+                                                                                        <option value="BH">Bahrain
+                                                                                        </option>
+                                                                                        <option value="BD">Bangladesh
+                                                                                        </option>
+                                                                                        <option value="BB">Barbados
+                                                                                        </option>
+                                                                                        <option value="BY">Belarus
+                                                                                        </option>
+                                                                                        <option value="BE">Belgium
+                                                                                        </option>
+                                                                                        <option value="BZ">Belize
+                                                                                        </option>
+                                                                                        <option value="BJ">Benin
+                                                                                        </option>
+                                                                                        <option value="BM">Bermuda
+                                                                                        </option>
+                                                                                        <option value="BT">Bhutan
+                                                                                        </option>
+                                                                                        <option value="BO">Bolivia,
+                                                                                                Plurinational State of
+                                                                                        </option>
+                                                                                        <option value="BQ">Bonaire, Sint
+                                                                                                Eustatius and Saba
+                                                                                        </option>
+                                                                                        <option value="BA">Bosnia and
+                                                                                                Herzegovina</option>
+                                                                                        <option value="BW">Botswana
+                                                                                        </option>
+                                                                                        <option value="BV">Bouvet Island
+                                                                                        </option>
+                                                                                        <option value="BR">Brazil
+                                                                                        </option>
+                                                                                        <option value="IO">British
+                                                                                                Indian Ocean
+                                                                                                Territory</option>
+                                                                                        <option value="BN">Brunei
+                                                                                                Darussalam
+                                                                                        </option>
+                                                                                        <option value="BG">Bulgaria
+                                                                                        </option>
+                                                                                        <option value="BF">Burkina Faso
+                                                                                        </option>
+                                                                                        <option value="BI">Burundi
+                                                                                        </option>
+                                                                                        <option value="KH">Cambodia
+                                                                                        </option>
+                                                                                        <option value="CM">Cameroon
+                                                                                        </option>
+                                                                                        <option value="CA">Canada
+                                                                                        </option>
+                                                                                        <option value="CV">Cape Verde
+                                                                                        </option>
+                                                                                        <option value="KY">Cayman
+                                                                                                Islands
+                                                                                        </option>
+                                                                                        <option value="CF">Central
+                                                                                                African
+                                                                                                Republic</option>
+                                                                                        <option value="TD">Chad</option>
+                                                                                        <option value="CL">Chile
+                                                                                        </option>
+                                                                                        <option value="CN">China
+                                                                                        </option>
+                                                                                        <option value="CX">Christmas
+                                                                                                Island
+                                                                                        </option>
+                                                                                        <option value="CC">Cocos
+                                                                                                (Keeling)
+                                                                                                Islands</option>
+                                                                                        <option value="CO">Colombia
+                                                                                        </option>
+                                                                                        <option value="KM">Comoros
+                                                                                        </option>
+                                                                                        <option value="CG">Congo
+                                                                                        </option>
+                                                                                        <option value="CD">Congo, the
+                                                                                                Democratic
+                                                                                                Republic of the</option>
+                                                                                        <option value="CK">Cook Islands
+                                                                                        </option>
+                                                                                        <option value="CR">Costa Rica
+                                                                                        </option>
+                                                                                        <option value="CI">Côte d'Ivoire
+                                                                                        </option>
+                                                                                        <option value="HR">Croatia
+                                                                                        </option>
+                                                                                        <option value="CU">Cuba</option>
+                                                                                        <option value="CW">Curaçao
+                                                                                        </option>
+                                                                                        <option value="CY">Cyprus
+                                                                                        </option>
+                                                                                        <option value="CZ">Czech
+                                                                                                Republic
+                                                                                        </option>
+                                                                                        <option value="DK">Denmark
+                                                                                        </option>
+                                                                                        <option value="DJ">Djibouti
+                                                                                        </option>
+                                                                                        <option value="DM">Dominica
+                                                                                        </option>
+                                                                                        <option value="DO">Dominican
+                                                                                                Republic
+                                                                                        </option>
+                                                                                        <option value="EC">Ecuador
+                                                                                        </option>
+                                                                                        <option value="EG">Egypt
+                                                                                        </option>
+                                                                                        <option value="SV">El Salvador
+                                                                                        </option>
+                                                                                        <option value="GQ">Equatorial
+                                                                                                Guinea
+                                                                                        </option>
+                                                                                        <option value="ER">Eritrea
+                                                                                        </option>
+                                                                                        <option value="EE">Estonia
+                                                                                        </option>
+                                                                                        <option value="ET">Ethiopia
+                                                                                        </option>
+                                                                                        <option value="FK">Falkland
+                                                                                                Islands
+                                                                                                (Malvinas)</option>
+                                                                                        <option value="FO">Faroe Islands
+                                                                                        </option>
+                                                                                        <option value="FJ">Fiji</option>
+                                                                                        <option value="FI">Finland
+                                                                                        </option>
+                                                                                        <option value="FR">France
+                                                                                        </option>
+                                                                                        <option value="GF">French Guiana
+                                                                                        </option>
+                                                                                        <option value="PF">French
+                                                                                                Polynesia
+                                                                                        </option>
+                                                                                        <option value="TF">French
+                                                                                                Southern
+                                                                                                Territories</option>
+                                                                                        <option value="GA">Gabon
+                                                                                        </option>
+                                                                                        <option value="GM">Gambia
+                                                                                        </option>
+                                                                                        <option value="GE">Georgia
+                                                                                        </option>
+                                                                                        <option value="DE">Germany
+                                                                                        </option>
+                                                                                        <option value="GH">Ghana
+                                                                                        </option>
+                                                                                        <option value="GI">Gibraltar
+                                                                                        </option>
+                                                                                        <option value="GR">Greece
+                                                                                        </option>
+                                                                                        <option value="GL">Greenland
+                                                                                        </option>
+                                                                                        <option value="GD">Grenada
+                                                                                        </option>
+                                                                                        <option value="GP">Guadeloupe
+                                                                                        </option>
+                                                                                        <option value="GU">Guam</option>
+                                                                                        <option value="GT">Guatemala
+                                                                                        </option>
+                                                                                        <option value="GG">Guernsey
+                                                                                        </option>
+                                                                                        <option value="GN">Guinea
+                                                                                        </option>
+                                                                                        <option value="GW">Guinea-Bissau
+                                                                                        </option>
+                                                                                        <option value="GY">Guyana
+                                                                                        </option>
+                                                                                        <option value="HT">Haiti
+                                                                                        </option>
+                                                                                        <option value="HM">Heard Island
+                                                                                                and
+                                                                                                McDonald Islands
+                                                                                        </option>
+                                                                                        <option value="VA">Holy See
+                                                                                                (Vatican
+                                                                                                City State)</option>
+                                                                                        <option value="HN">Honduras
+                                                                                        </option>
+                                                                                        <option value="HK">Hong Kong
+                                                                                        </option>
+                                                                                        <option value="HU">Hungary
+                                                                                        </option>
+                                                                                        <option value="IS">Iceland
+                                                                                        </option>
+                                                                                        <option value="IN">India
+                                                                                        </option>
+                                                                                        <option value="ID">Indonesia
+                                                                                        </option>
+                                                                                        <option value="IR">Iran, Islamic
+                                                                                                Republic of</option>
+                                                                                        <option value="IQ">Iraq</option>
+                                                                                        <option value="IE">Ireland
+                                                                                        </option>
+                                                                                        <option value="IM">Isle of Man
+                                                                                        </option>
+                                                                                        <option value="IL">Israel
+                                                                                        </option>
+                                                                                        <option value="IT">Italy
+                                                                                        </option>
+                                                                                        <option value="JM">Jamaica
+                                                                                        </option>
+                                                                                        <option value="JP">Japan
+                                                                                        </option>
+                                                                                        <option value="JE">Jersey
+                                                                                        </option>
+                                                                                        <option value="JO">Jordan
+                                                                                        </option>
+                                                                                        <option value="KZ">Kazakhstan
+                                                                                        </option>
+                                                                                        <option value="KE">Kenya
+                                                                                        </option>
+                                                                                        <option value="KI">Kiribati
+                                                                                        </option>
+                                                                                        <option value="KP">Korea,
+                                                                                                Democratic
+                                                                                                People's Republic of
+                                                                                        </option>
+                                                                                        <option value="KR">Korea,
+                                                                                                Republic of
+                                                                                        </option>
+                                                                                        <option value="KW">Kuwait
+                                                                                        </option>
+                                                                                        <option value="KG">Kyrgyzstan
+                                                                                        </option>
+                                                                                        <option value="LA">Lao People's
+                                                                                                Democratic Republic
+                                                                                        </option>
+                                                                                        <option value="LV">Latvia
+                                                                                        </option>
+                                                                                        <option value="LB">Lebanon
+                                                                                        </option>
+                                                                                        <option value="LS">Lesotho
+                                                                                        </option>
+                                                                                        <option value="LR">Liberia
+                                                                                        </option>
+                                                                                        <option value="LY">Libya
+                                                                                        </option>
+                                                                                        <option value="LI">Liechtenstein
+                                                                                        </option>
+                                                                                        <option value="LT">Lithuania
+                                                                                        </option>
+                                                                                        <option value="LU">Luxembourg
+                                                                                        </option>
+                                                                                        <option value="MO">Macao
+                                                                                        </option>
+                                                                                        <option value="MK">Macedonia,
+                                                                                                the former
+                                                                                                Yugoslav Republic of
+                                                                                        </option>
+                                                                                        <option value="MG">Madagascar
+                                                                                        </option>
+                                                                                        <option value="MW">Malawi
+                                                                                        </option>
+                                                                                        <option value="MY">Malaysia
+                                                                                        </option>
+                                                                                        <option value="MV">Maldives
+                                                                                        </option>
+                                                                                        <option value="ML">Mali</option>
+                                                                                        <option value="MT">Malta
+                                                                                        </option>
+                                                                                        <option value="MH">Marshall
+                                                                                                Islands
+                                                                                        </option>
+                                                                                        <option value="MQ">Martinique
+                                                                                        </option>
+                                                                                        <option value="MR">Mauritania
+                                                                                        </option>
+                                                                                        <option value="MU">Mauritius
+                                                                                        </option>
+                                                                                        <option value="YT">Mayotte
+                                                                                        </option>
+                                                                                        <option value="MX">Mexico
+                                                                                        </option>
+                                                                                        <option value="FM">Micronesia,
+                                                                                                Federated
+                                                                                                States of</option>
+                                                                                        <option value="MD">Moldova,
+                                                                                                Republic of
+                                                                                        </option>
+                                                                                        <option value="MC">Monaco
+                                                                                        </option>
+                                                                                        <option value="MN">Mongolia
+                                                                                        </option>
+                                                                                        <option value="ME">Montenegro
+                                                                                        </option>
+                                                                                        <option value="MS">Montserrat
+                                                                                        </option>
+                                                                                        <option value="MA">Morocco
+                                                                                        </option>
+                                                                                        <option value="MZ">Mozambique
+                                                                                        </option>
+                                                                                        <option value="MM">Myanmar
+                                                                                        </option>
+                                                                                        <option value="NA">Namibia
+                                                                                        </option>
+                                                                                        <option value="NR">Nauru
+                                                                                        </option>
+                                                                                        <option value="NP">Nepal
+                                                                                        </option>
+                                                                                        <option value="NL">Netherlands
+                                                                                        </option>
+                                                                                        <option value="NC">New Caledonia
+                                                                                        </option>
+                                                                                        <option value="NZ">New Zealand
+                                                                                        </option>
+                                                                                        <option value="NI">Nicaragua
+                                                                                        </option>
+                                                                                        <option value="NE">Niger
+                                                                                        </option>
+                                                                                        <option value="NG">Nigeria
+                                                                                        </option>
+                                                                                        <option value="NU">Niue</option>
+                                                                                        <option value="NF">Norfolk
+                                                                                                Island
+                                                                                        </option>
+                                                                                        <option value="MP">Northern
+                                                                                                Mariana
+                                                                                                Islands</option>
+                                                                                        <option value="NO">Norway
+                                                                                        </option>
+                                                                                        <option value="OM">Oman</option>
+                                                                                        <option value="PK">Pakistan
+                                                                                        </option>
+                                                                                        <option value="PW">Palau
+                                                                                        </option>
+                                                                                        <option value="PS">Palestinian
+                                                                                                Territory, Occupied
+                                                                                        </option>
+                                                                                        <option value="PA">Panama
+                                                                                        </option>
+                                                                                        <option value="PG">Papua New
+                                                                                                Guinea
+                                                                                        </option>
+                                                                                        <option value="PY">Paraguay
+                                                                                        </option>
+                                                                                        <option value="PE">Peru</option>
+                                                                                        <option value="PH">Philippines
+                                                                                        </option>
+                                                                                        <option value="PN">Pitcairn
+                                                                                        </option>
+                                                                                        <option value="PL">Poland
+                                                                                        </option>
+                                                                                        <option value="PT">Portugal
+                                                                                        </option>
+                                                                                        <option value="PR">Puerto Rico
+                                                                                        </option>
+                                                                                        <option value="QA">Qatar
+                                                                                        </option>
+                                                                                        <option value="RE">Réunion
+                                                                                        </option>
+                                                                                        <option value="RO">Romania
+                                                                                        </option>
+                                                                                        <option value="RU">Russian
+                                                                                                Federation
+                                                                                        </option>
+                                                                                        <option value="RW">Rwanda
+                                                                                        </option>
+                                                                                        <option value="BL">Saint
+                                                                                                Barthélemy
+                                                                                        </option>
+                                                                                        <option value="SH">Saint Helena,
+                                                                                                Ascension and Tristan da
+                                                                                                Cunha
+                                                                                        </option>
+                                                                                        <option value="KN">Saint Kitts
+                                                                                                and Nevis
+                                                                                        </option>
+                                                                                        <option value="LC">Saint Lucia
+                                                                                        </option>
+                                                                                        <option value="MF">Saint Martin
+                                                                                                (French
+                                                                                                part)</option>
+                                                                                        <option value="PM">Saint Pierre
+                                                                                                and
+                                                                                                Miquelon</option>
+                                                                                        <option value="VC">Saint Vincent
+                                                                                                and the
+                                                                                                Grenadines</option>
+                                                                                        <option value="WS">Samoa
+                                                                                        </option>
+                                                                                        <option value="SM">San Marino
+                                                                                        </option>
+                                                                                        <option value="ST">Sao Tome and
+                                                                                                Principe
+                                                                                        </option>
+                                                                                        <option value="SA">Saudi Arabia
+                                                                                        </option>
+                                                                                        <option value="SN">Senegal
+                                                                                        </option>
+                                                                                        <option value="RS">Serbia
+                                                                                        </option>
+                                                                                        <option value="SC">Seychelles
+                                                                                        </option>
+                                                                                        <option value="SL">Sierra Leone
+                                                                                        </option>
+                                                                                        <option value="SG">Singapore
+                                                                                        </option>
+                                                                                        <option value="SX">Sint Maarten
+                                                                                                (Dutch
+                                                                                                part)</option>
+                                                                                        <option value="SK">Slovakia
+                                                                                        </option>
+                                                                                        <option value="SI">Slovenia
+                                                                                        </option>
+                                                                                        <option value="SB">Solomon
+                                                                                                Islands
+                                                                                        </option>
+                                                                                        <option value="SO">Somalia
+                                                                                        </option>
+                                                                                        <option value="ZA">South Africa
+                                                                                        </option>
+                                                                                        <option value="GS">South Georgia
+                                                                                                and the
+                                                                                                South Sandwich Islands
+                                                                                        </option>
+                                                                                        <option value="SS">South Sudan
+                                                                                        </option>
+                                                                                        <option value="ES">Spain
+                                                                                        </option>
+                                                                                        <option value="LK">Sri Lanka
+                                                                                        </option>
+                                                                                        <option value="SD">Sudan
+                                                                                        </option>
+                                                                                        <option value="SR">Suriname
+                                                                                        </option>
+                                                                                        <option value="SJ">Svalbard and
+                                                                                                Jan
+                                                                                                Mayen</option>
+                                                                                        <option value="SZ">Swaziland
+                                                                                        </option>
+                                                                                        <option value="SE">Sweden
+                                                                                        </option>
+                                                                                        <option value="CH">Switzerland
+                                                                                        </option>
+                                                                                        <option value="SY">Syrian Arab
+                                                                                                Republic
+                                                                                        </option>
+                                                                                        <option value="TW">Taiwan,
+                                                                                                Province of
+                                                                                                China</option>
+                                                                                        <option value="TJ">Tajikistan
+                                                                                        </option>
+                                                                                        <option value="TZ">Tanzania,
+                                                                                                United
+                                                                                                Republic of</option>
+                                                                                        <option value="TH">Thailand
+                                                                                        </option>
+                                                                                        <option value="TL">Timor-Leste
+                                                                                        </option>
+                                                                                        <option value="TG">Togo</option>
+                                                                                        <option value="TK">Tokelau
+                                                                                        </option>
+                                                                                        <option value="TO">Tonga
+                                                                                        </option>
+                                                                                        <option value="TT">Trinidad and
+                                                                                                Tobago
+                                                                                        </option>
+                                                                                        <option value="TN">Tunisia
+                                                                                        </option>
+                                                                                        <option value="TR">Turkey
+                                                                                        </option>
+                                                                                        <option value="TM">Turkmenistan
+                                                                                        </option>
+                                                                                        <option value="TC">Turks and
+                                                                                                Caicos
+                                                                                                Islands</option>
+                                                                                        <option value="TV">Tuvalu
+                                                                                        </option>
+                                                                                        <option value="UG">Uganda
+                                                                                        </option>
+                                                                                        <option value="UA">Ukraine
+                                                                                        </option>
+                                                                                        <option value="AE">United Arab
+                                                                                                Emirates
+                                                                                        </option>
+                                                                                        <option value="GB">United
+                                                                                                Kingdom
+                                                                                        </option>
+                                                                                        <option value="US">United States
+                                                                                        </option>
+                                                                                        <option value="UM">United States
+                                                                                                Minor
+                                                                                                Outlying Islands
+                                                                                        </option>
+                                                                                        <option value="UY">Uruguay
+                                                                                        </option>
+                                                                                        <option value="UZ">Uzbekistan
+                                                                                        </option>
+                                                                                        <option value="VU">Vanuatu
+                                                                                        </option>
+                                                                                        <option value="VE">Venezuela,
+                                                                                                Bolivarian
+                                                                                                Republic of</option>
+                                                                                        <option value="VN">Viet Nam
+                                                                                        </option>
+                                                                                        <option value="VG">Virgin
+                                                                                                Islands,
+                                                                                                British</option>
+                                                                                        <option value="VI">Virgin
+                                                                                                Islands, U.S.
+                                                                                        </option>
+                                                                                        <option value="WF">Wallis and
+                                                                                                Futuna
+                                                                                        </option>
+                                                                                        <option value="EH">Western
+                                                                                                Sahara
+                                                                                        </option>
+                                                                                        <option value="YE">Yemen
+                                                                                        </option>
+                                                                                        <option value="ZM">Zambia
+                                                                                        </option>
+                                                                                        <option value="ZW">Zimbabwe
+                                                                                        </option>
+                                                                                </datalist>
+                                                                                </input>
+                                                                        </fieldset>
+                                                                </div>
                                                         </div>
                                                         <br>
                                                         <div class="survey-section">
                                                                 <p>What is the best anime of all time?</p>
-                                                                <label id="enter-anime" for="anime">Enter Anime Name
+                                                                <label id="enter-anime" for="anime">Enter Anime
+                                                                        Name
                                                                         Here:</label>
                                                                 <input type="text" name="preferred" id="enter-anime1"
                                                                         class="surveyformat"
@@ -403,272 +651,344 @@
                                                         <br>
                                                         <div id="survey-checkbox-one">
                                                                 <p>Select the top 3 anime genres</p>
-                                                                <p><span class="small">(Check 3 boxes that apply)</span>
+                                                                <p><span class="small">(Check 3 boxes that
+                                                                                apply)</span>
                                                                 </p>
 
-                                                                <label class="container1"><input name="preferred"
+                                                                <label class="container-check"><input name="preferred"
                                                                                 value="genre" type="checkbox"
-                                                                                class="checkbox-one">
+                                                                                class="checkbox-one"><span
+                                                                                class="checkmark"></span>
                                                                         Action</label><br>
-                                                                <label><input name="preferred" value="genre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-one" />Horror</label><br>
-                                                                <label><input name="preferred" value="genre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-one" />Adventure</label><br>
-                                                                <label><input nname="preferred" value="genre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-one" />Comedy</label><br>
-                                                                <label><input name="preferred" value="genre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-one" />Slice-of-Life</label><br>
-                                                                <label><input name="preferred" value="genre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-one" />Fantasy</label><br>
-                                                                <label><input name="preferred" value="genre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-one" />Supernatural</label><br>
-                                                                <label><input name="preferred" value="genre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-one" />Mystery</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="genre" type="checkbox"
+                                                                                class="checkbox-one"><span
+                                                                                class="checkmark"></span>
+                                                                        Horror</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="genre" type="checkbox"
+                                                                                class="checkbox-one"><span
+                                                                                class="checkmark"></span>Adventure</label><br>
+                                                                <label class="container-check"><input nname="preferred"
+                                                                                value="genre" type="checkbox"
+                                                                                class="checkbox-one"><span
+                                                                                class="checkmark"></span>Comedy</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="genre" type="checkbox"
+                                                                                class="checkbox-one"><span
+                                                                                class="checkmark"></span>Slice-of-Life</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="genre" type="checkbox"
+                                                                                class="checkbox-one"><span
+                                                                                class="checkmark"></span>Fantasy</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="genre" type="checkbox"
+                                                                                class="checkbox-one"><span
+                                                                                class="checkmark"></span>Supernatural</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="genre" type="checkbox"
+                                                                                class="checkbox-one"><span
+                                                                                class="checkmark"></span>Mystery</label><br>
 
-                                                                <label><input name="preferred" value="genre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-one" />Romance</label><br>
-                                                                <label><input name="preferred" value="genre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-one" />Sci-Fi</label><br>
-                                                                <label><input name="preferred" value="genre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-one" />Psychological</label><br>
-                                                                <label><input name="preferred" value="genre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-one" />Drama</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="genre" type="checkbox"
+                                                                                class="checkbox-one"><span
+                                                                                class="checkmark"></span>Romance</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="genre" type="checkbox"
+                                                                                class="checkbox-one"><span
+                                                                                class="checkmark"></span>Sci-Fi</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="genre" type="checkbox"
+                                                                                class="checkbox-one"><span
+                                                                                class="checkmark"></span>Psychological</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="genre" type="checkbox"
+                                                                                class="checkbox-one"><span
+                                                                                class="checkmark"></span>Drama</label><br>
                                                         </div>
                                                         <hr>
                                                         <div id="survey-checkbox-two">
                                                                 <p>Select the top 3 anime <em>SUBgenres</em></p>
-                                                                <p><span class="small">(Check 3 boxes that apply)</span>
+                                                                <p><span class="small">(Check 3 boxes that
+                                                                                apply)</span>
                                                                 </p>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Cyberpunk</label><br>
-                                                                <label><input name="preferred" value="subenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Game</label><br>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Ecchi</label><br>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Demons</label><br>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Harem</label><br>
-                                                                <label><input nname="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Josei</label><br>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Martial
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Cyberpunk</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Game</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Ecchi</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Demons</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Harem</label><br>
+                                                                <label class="container-check"><input nname="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Josei</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Martial
                                                                         Arts</label><br>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Kids</label><br>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Historical</label><br>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Isekai</label><br>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Military</label><br>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />mecha</label><br>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Music</label><br>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Parody</label><br>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Police</label><br>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Post-Apocalyptic</label><br>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Reverse
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Kids</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Historical</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Isekai</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Military</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>mecha</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Music</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Parody</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Police</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Post-Apocalyptic</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Reverse
                                                                         Harem</label><br>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />School</label><br>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Seinen</label><br>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Shoujo</label><br>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Shoujo-Ai</label><br>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Shounen</label><br>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Shounen-ai</label><br>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Space</label><br>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Sports</label><br>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Super
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>School</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Seinen</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Shoujo</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Shoujo-Ai</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Shounen</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Shounen-ai</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Space</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Sports</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Super
                                                                         Power</label><br>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Tragedy</label><br>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Vampire</label><br>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Yuri</label><br>
-                                                                <label><input name="preferred" value="subgenre"
-                                                                                type="checkbox"
-                                                                                class="checkbox-two" />Yaoi</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Tragedy</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Vampire</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Yuri</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="subgenre" type="checkbox"
+                                                                                class="checkbox-two"><span
+                                                                                class="checkmark"></span>Yaoi</label><br>
                                                         </div>
                                                         <hr>
                                                         <div id="survey-checkbox-three">
-                                                                <p>Select the top 3 things about anime you hate the most
+                                                                <p>Select the top 3 things about anime you hate
+                                                                        the most
                                                                 </p>
                                                                 <span class="small">(Check 3 boxes that apply)
-                                                                </span><br>
-                                                                <label><input name="preferred" value="hate"
-                                                                                type="checkbox"
-                                                                                class="checkbox-three" />Isekai</label><br>
-                                                                <label><input name="preferred" value="hate"
-                                                                                type="checkbox"
-                                                                                class="checkbox-three" />
+                                                                </span>
+                                                                <br>
+                                                                <br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="hate" type="checkbox"
+                                                                                class="checkbox-three"><span
+                                                                                class="checkmark"></span>Isekai</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="hate" type="checkbox"
+                                                                                class="checkbox-three"><span
+                                                                                class="checkmark"></span>
                                                                         The
                                                                         beach
                                                                         episode </label><br>
-                                                                <label><input name="preferred" value="hate"
-                                                                                type="checkbox"
-                                                                                class="checkbox-three" />The
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="hate" type="checkbox"
+                                                                                class="checkbox-three"><span
+                                                                                class="checkmark"></span>The
                                                                         Hot
                                                                         Springs
                                                                         episode</label><br>
-                                                                <label><input name="preferred" value="hate"
-                                                                                type="checkbox"
-                                                                                class="checkbox-three" />Important
-                                                                        characters get sick for the plot</label><br>
-                                                                <label><input name="preferred" value="hate"
-                                                                                type="checkbox"
-                                                                                class="checkbox-three" />Main
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="hate" type="checkbox"
+                                                                                class="checkbox-three"><span
+                                                                                class="checkmark"></span>Important
+                                                                        characters get sick for the
+                                                                        plot</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="hate" type="checkbox"
+                                                                                class="checkbox-three"><span
+                                                                                class="checkmark"></span>Main
                                                                         character
                                                                         oblivious to romantic queues</label><br>
 
-                                                                <label id="explain"><input name="preferred" value="hate"
+                                                                <label class="container-check" id="explain"><input
+                                                                                name="preferred" value="hate"
                                                                                 type="checkbox"
-                                                                                class="checkbox-three" />Character
-                                                                        explains entire fighting technique...to the
+                                                                                class="checkbox-three"><span
+                                                                                class="checkmark"></span>Character
+                                                                        explains entire fighting technique...to
+                                                                        the
                                                                         person
                                                                         their
                                                                         fighting
                                                                 </label><br>
-                                                                <label><input name="preferred" value="hate"
-                                                                                type="checkbox"
-                                                                                class="checkbox-three" />Every
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="hate" type="checkbox"
+                                                                                class="checkbox-three"><span
+                                                                                class="checkmark"></span>Every
                                                                         character
                                                                         has a super dark past</label><br>
-                                                                <label><input name="preferred" value="hate"
-                                                                                type="checkbox"
-                                                                                class="checkbox-three" />Female
-                                                                        characters beat up male characters</label><br>
-                                                                <label><input name="preferred" value="hate"
-                                                                                type="checkbox"
-                                                                                class="checkbox-three" />Super
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="hate" type="checkbox"
+                                                                                class="checkbox-three"><span
+                                                                                class="checkmark"></span>Female
+                                                                        characters beat up male
+                                                                        characters</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="hate" type="checkbox"
+                                                                                class="checkbox-three"><span
+                                                                                class="checkmark"></span>Super
                                                                         long
                                                                         fight lasts for 4+ episodes</label><br>
-                                                                <label><input name="preferred" value="hate"
-                                                                                type="checkbox"
-                                                                                class="checkbox-three" />Main
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="hate" type="checkbox"
+                                                                                class="checkbox-three"><span
+                                                                                class="checkmark"></span>Main
                                                                         character
                                                                         gets window seat in class</label><br>
-                                                                <label><input name="preferred" value="hate"
-                                                                                type="checkbox"
-                                                                                class="checkbox-three" />Female
-                                                                        characters all bathe together...</label><br>
-                                                                <label><input name="preferred" value="hate"
-                                                                                type="checkbox"
-                                                                                class="checkbox-three" />Too
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="hate" type="checkbox"
+                                                                                class="checkbox-three"><span
+                                                                                class="checkmark"></span>Female
+                                                                        characters all bathe
+                                                                        together...</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="hate" type="checkbox"
+                                                                                class="checkbox-three"><span
+                                                                                class="checkmark"></span>Too
                                                                         many
                                                                         flashbacks</label><br>
-                                                                <label><input name="preferred" value="hate"
-                                                                                type="checkbox"
-                                                                                class="checkbox-three" />Filler
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="hate" type="checkbox"
+                                                                                class="checkbox-three"><span
+                                                                                class="checkmark"></span>Filler
                                                                         episodes</label><br>
-                                                                <label><input name="preferred" value="hate"
-                                                                                type="checkbox"
-                                                                                class="checkbox-three" />Exaggerated
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="hate" type="checkbox"
+                                                                                class="checkbox-three"><span
+                                                                                class="checkmark"></span>Exaggerated
                                                                         &
                                                                         unrealistic female anatomy</label><br>
-                                                                <label><input name="preferred" value="hate"
-                                                                                type="checkbox"
-                                                                                class="checkbox-three" />2D
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="hate" type="checkbox"
+                                                                                class="checkbox-three"><span
+                                                                                class="checkmark"></span>2D
                                                                         girls
                                                                         are
                                                                         not real :'(</label><br>
-                                                                <label><input name="preferred" value="hate"
-                                                                                type="checkbox"
-                                                                                class="checkbox-three" />The
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="hate" type="checkbox"
+                                                                                class="checkbox-three"><span
+                                                                                class="checkmark"></span>The
                                                                         anime
-                                                                        chooses not to follow the manga</label><br>
-                                                                <label><input name="preferred" value="hate"
-                                                                                type="checkbox"
-                                                                                class="checkbox-three" />Harems</label><br>
-                                                                <label><input name="preferred" value="hate"
-                                                                                type="checkbox"
-                                                                                class="checkbox-three" />The
+                                                                        chooses not to follow the
+                                                                        manga</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="hate" type="checkbox"
+                                                                                class="checkbox-three"><span
+                                                                                class="checkmark"></span>Harems</label><br>
+                                                                <label class="container-check"><input name="preferred"
+                                                                                value="hate" type="checkbox"
+                                                                                class="checkbox-three"><span
+                                                                                class="checkmark"></span>The
                                                                         useless
                                                                         female character</label><br>
                                                         </div>
                                                         <br>
                                                         <div class="survey-section">
-                                                                <p> Do you have any comments or suggestions for this or
+                                                                <p id="bottom-section"> Do you have any comments or
+                                                                        suggestions for
+                                                                        this or
                                                                         future surveys?</p>
-                                                                <textarea id="comments" name="comments"
-                                                                        class="enter-text"
+                                                                <textarea name="comments" class="enter-text"
                                                                         placeholder="This survey was very sugoi..."></textarea>
                                                         </div>
-                                                        <div class="survey-section">
+                                                        <div class="survey-section justify-content-center">
                                                                 <br>
-                                                                <div style="text-align:center;">
+                                                                <div class="button-center">
                                                                         <button type="submit" id="submit"
-                                                                                class="submit-button"
-                                                                                style="vertical-align:middle;"><span>Submit</span>
+                                                                                class="submit-button"><span>Submit</span>
                                                                         </button>
                                                                 </div>
                                                         </div>
+                                                </form>
+                                        </div>
 
-                                                </div>
-                                        </form>
                                 </div>
                         </div>
                 </div>
-
-                <div class="container p-2" id="container-foot">
-                        <footer>
-                                <p>Shara Belton Copyright &copy; 2022</p>
-                        </footer>
-                </div>
+        </div>
+        <div class="col-sm"></div>
+        <div class="container p-2" id="container-foot">
+                <footer>
+                        <p>Shara Belton Copyright &copy; 2022</p>
+                </footer>
         </div>
 </body>
 
