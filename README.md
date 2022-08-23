@@ -30,7 +30,7 @@ Well, why not? Just as there are terrible animes, there are truly amazing animes
 ### Previous Versions
 
 (Version 1)[https://codepen.io/therealsharuto/pen/NWjJVQY]
-(Version 2) [https://dashboard.render.com/static/srv-cbe9itn5f99c8omukfu0]
+(Version 2) [https://ultimate-anime-survey.onrender.com]
 
 #### ** Thanks for reading! **
 
